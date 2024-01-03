@@ -11,24 +11,33 @@ vybrat jen potřebné sloupce a value_type_code omezit na 5958,
 zkusit propojit payroll a price podle DATA za rok, obe napřed zprůměrovat
 
 CREATE TABLE t_ivana_gerzova_project_SQL_primary_final AS
-	(SELECT 
-		cp.id,
-		cp.value,
-		cpvt.name AS value_type,
-		cpu.name AS unit,
-		cpc.name AS calculation,
-		cpib.name AS industry_branch,
-		cp.payroll_year,
-		cp.payroll_quarter 
-	FROM czechia_payroll AS cp 
-	JOIN czechia_payroll_value_type AS cpvt
-		ON cp.value_type_code = cpvt.code 
-	JOIN czechia_payroll_unit AS cpu 
-		ON cp.unit_code = cpu.code 
-	JOIN czechia_payroll_calculation AS cpc 
-		ON cp.calculation_code = cpc.code 
-	JOIN czechia_payroll_industry_branch AS cpib 
-		ON cp.industry_branch_code = cpib.code);
+	(
+	
+	
+-- tabulka mezd--
+	
+SELECT 
+	cp.id,
+	round(avg(cp.value), 2) AS average_value,
+	cpvt.name AS value_type,
+	cpu.name AS unit,
+	cpc.name AS calculation,
+	cpib.name AS industry_branch,
+	cp.payroll_year,
+	cp.payroll_quarter 
+FROM czechia_payroll AS cp 
+JOIN czechia_payroll_value_type AS cpvt
+	ON cp.value_type_code = cpvt.code 
+JOIN czechia_payroll_unit AS cpu 
+	ON cp.unit_code = cpu.code 
+JOIN czechia_payroll_calculation AS cpc 
+	ON cp.calculation_code = cpc.code 
+JOIN czechia_payroll_industry_branch AS cpib 
+	ON cp.industry_branch_code = cpib.code
+WHERE value_type_code = 5958
+GROUP BY industry_branch_code, payroll_year;
+
+-- tabulka cen --
 
 SELECT 
 	cp.id,
@@ -81,8 +90,17 @@ WHERE value_type_code = 5958
 	AND calculation_code = 200
 	
 	
-SELECT * FROM czechia_payroll;
+SELECT *,
+	avg(value) 
+FROM czechia_payroll
+WHERE industry_branch_code = 'A'
+	AND value_type_code = 5958
+	AND payroll_year = 2018
+	AND calculation_code = 100
+GROUP BY payroll_year;
 
 SELECT * FROM czechia_price;
 
 SELECT * FROM czechia_district AS cd;
+
+SELECT * FROM czechia_payroll_value_type AS cpvt;

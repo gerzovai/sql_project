@@ -23,8 +23,7 @@ SELECT
 	cpu.name AS unit,
 	cpc.name AS calculation,
 	cpib.name AS industry_branch,
-	cp.payroll_year,
-	cp.payroll_quarter 
+	cp.payroll_year
 FROM czechia_payroll AS cp 
 JOIN czechia_payroll_value_type AS cpvt
 	ON cp.value_type_code = cpvt.code 
@@ -40,17 +39,17 @@ GROUP BY industry_branch_code, payroll_year;
 -- tabulka cen --
 
 SELECT 
-	cp.id,
-	cp.value,
 	cpc.name AS category,
-	cp.date_from,
-	cp.date_to,
-	cr.name AS region
+	cp.value,
+	avg( YEAR (cp.date_from)) AS date_from
+	-- YEAR (cp.date_to) AS date_to, --
 FROM czechia_price AS cp 
 JOIN czechia_price_category AS cpc 
 	ON cp.category_code = cpc.code 
-JOIN czechia_region AS cr 
-	ON cp.region_code = cr.code;
+LEFT JOIN czechia_region AS cr 
+	ON cp.region_code = cr.code
+WHERE region_code IS NULL 
+GROUP BY cp.region_code, cp.category_code, YEAR (cp.date_from) ;
 	
 SELECT * FROM czechia_price_category AS cpc 
 	

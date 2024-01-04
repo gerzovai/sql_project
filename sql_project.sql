@@ -73,6 +73,33 @@ WHERE (category LIKE 'Mléko%' OR category LIKE 'Chléb%')
 	AND industry_branch IS NOT NULL 
 ORDER BY industry_branch, category ;
 
+-- otázka 3 --
+/*Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?*/
+
+SELECT 
+	DISTINCT tigpspf.category,
+	tigpspf.date_year,
+	tigpspf2.date_year,
+	tigpspf.average_price,
+	tigpspf2.average_price,
+	avg(((tigpspf2.average_price - tigpspf.average_price) / tigpspf.average_price) * 100) AS percentage_increase
+FROM t_ivana_gerzova_project_sql_primary_final AS tigpspf 
+JOIN t_ivana_gerzova_project_sql_primary_final AS tigpspf2 
+	ON tigpspf.category = tigpspf2.category 
+	AND tigpspf.date_year + 1  = tigpspf2.date_year
+GROUP BY category 
+ORDER BY percentage_increase ;
+
+-- (tigpspf2.average_price - tigpspf.average_price) / tigpspf.average_price  AS percentage_increase --
+-- otázka 4 --
+/*Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?*/
+
+
+
+-- otázka 5 --
+/*Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, 
+  projeví se to na cenách potravin či mzdách ve stejném nebo násdujícím roce výraznějším růstem?*/
+
 
 
 SELECT 

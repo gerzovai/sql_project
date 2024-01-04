@@ -1,16 +1,5 @@
--- primární tabulka --
-/*
-v základní payroll mám kody - přiřadit k nim popis
-některé sloupce vynechat
-vybrat jen potřebné sloupce a value_type_code omezit na 5958,
-*/
-
-zkusit propojit payroll a price podle DATA za rok, obe napřed zprůměrovat
-
 drop TABLE t_ivana_gerzova_project_SQL_primary_final;
-	
-	
-	
+
 -- tabulka mezd--	
 CREATE TABLE t_ivana_gerzova_project_SQL_primary_final AS (
 	WITH edit_czechia_payroll AS (	
@@ -51,38 +40,27 @@ CREATE TABLE t_ivana_gerzova_project_SQL_primary_final AS (
 	
 SELECT * FROM t_ivana_gerzova_project_sql_primary_final AS tigpspf;
 	
-SELECT * FROM czechia_price_category AS cpc 
-	
-SELECT *
-FROM t_ivana_gerzova_project_sql_primary_final AS tigpspf ;
-
-
-SELECT 
-	cpc.name AS category,
-	round(avg (cp2.value), 2) AS average_price,
-	YEAR (cp2.date_from) AS date_year
-FROM czechia_price AS cp2 
-LEFT JOIN czechia_price_category AS cpc 
-	ON cp2.category_code = cpc.code 
-LEFT JOIN czechia_region AS cr 
-	ON cp2.region_code = cr.code
-WHERE cp2.region_code IS NULL 
-GROUP BY category, date_year
-;
-
-
 
 -- otázka 1 --
-/*
-porovnám rok- (rok-1)
-seřadit vzestupně podle rozdílu
-*/
-/*
+/*Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?*/
+
 SELECT 
-	cp.payroll_year,
-	cp2.payroll_year, 
-	cp2.value - cp.value AS year_diff 
-	*/
+	DISTINCT tigpspf.industry_branch,
+	tigpspf2.payroll_year AS prev_year, 
+	tigpspf.payroll_year AS curr_year,
+	tigpspf2.average_value,
+	tigpspf.average_value, 	 
+	tigpspf.average_value - tigpspf2.average_value AS difference_value
+FROM t_ivana_gerzova_project_sql_primary_final AS tigpspf 
+JOIN t_ivana_gerzova_project_sql_primary_final AS tigpspf2 
+	ON tigpspf.industry_branch = tigpspf2.industry_branch
+	AND tigpspf.category = tigpspf2.category 
+	AND tigpspf.payroll_year = tigpspf2.payroll_year + 1
+WHERE tigpspf.average_value - tigpspf2.average_value < 0
+ORDER BY industry_branch, prev_year, difference_value ;
+	
+-- otázka 2 --
+/*Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?*/
 
 SELECT 
 	cp.payroll_year,
@@ -99,10 +77,7 @@ WHERE cp.value_type_code = 5958
 	AND cp.payroll_quarter = 4
 	AND cp2.payroll_quarter = 4;
 
-SELECT *
-FROM czechia_payroll
-WHERE value_type_code = 5958
-	AND calculation_code = 200
+
 	
 	
 SELECT *,
@@ -114,8 +89,4 @@ WHERE industry_branch_code = 'A'
 	AND calculation_code = 100
 GROUP BY payroll_year;
 
-SELECT * FROM czechia_price;
 
-SELECT * FROM czechia_district AS cd;
-
-SELECT * FROM czechia_payroll_value_type AS cpvt;

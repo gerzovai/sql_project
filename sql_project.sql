@@ -77,11 +77,7 @@ ORDER BY industry_branch, category ;
 /*Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?*/
 
 SELECT 
-	DISTINCT tigpspf.category,
-	tigpspf.date_year,
-	tigpspf2.date_year,
-	tigpspf.average_price,
-	tigpspf2.average_price,
+	tigpspf.category,
 	avg(((tigpspf2.average_price - tigpspf.average_price) / tigpspf.average_price) * 100) AS percentage_increase
 FROM t_ivana_gerzova_project_sql_primary_final AS tigpspf 
 JOIN t_ivana_gerzova_project_sql_primary_final AS tigpspf2 
@@ -90,10 +86,25 @@ JOIN t_ivana_gerzova_project_sql_primary_final AS tigpspf2
 GROUP BY category 
 ORDER BY percentage_increase ;
 
--- (tigpspf2.average_price - tigpspf.average_price) / tigpspf.average_price  AS percentage_increase --
 -- otázka 4 --
 /*Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?*/
 
+SELECT 
+	tigpspf.payroll_year,
+	tigpspf2.payroll_year,
+	tigpspf.average_value,
+	tigpspf2.average_value,
+	((tigpspf2.average_value - tigpspf.average_value) / tigpspf.average_value ) * 100 AS percentage_increase_value, 
+	tigpspf.category,
+	tigpspf.average_price,
+	tigpspf2.average_price,
+	((tigpspf2.average_price - tigpspf.average_price) / tigpspf.average_price ) * 100 AS percentage_increase_price
+FROM t_ivana_gerzova_project_sql_primary_final AS tigpspf 
+JOIN t_ivana_gerzova_project_sql_primary_final AS tigpspf2  
+	ON tigpspf.category = tigpspf2.category  
+	AND tigpspf.date_year + 1  = tigpspf2.date_year
+WHERE tigpspf.industry_branch IS NULL 
+	AND tigpspf2.industry_branch IS NULL;
 
 
 -- otázka 5 --

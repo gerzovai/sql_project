@@ -92,19 +92,16 @@ ORDER BY percentage_increase ;
 SELECT 
 	tigpspf.payroll_year,
 	tigpspf2.payroll_year,
-	tigpspf.average_value,
-	tigpspf2.average_value,
 	((tigpspf2.average_value - tigpspf.average_value) / tigpspf.average_value ) * 100 AS percentage_increase_value, 
-	tigpspf.category,
-	tigpspf.average_price,
-	tigpspf2.average_price,
-	((tigpspf2.average_price - tigpspf.average_price) / tigpspf.average_price ) * 100 AS percentage_increase_price
+	avg ((tigpspf2.average_price - tigpspf.average_price) / tigpspf.average_price ) * 100 AS percentage_increase_price,
+	(((tigpspf2.average_value - tigpspf.average_value) / tigpspf.average_value ) * 100) - (avg ((tigpspf2.average_price - tigpspf.average_price) / tigpspf.average_price ) * 100) AS increase_difference
 FROM t_ivana_gerzova_project_sql_primary_final AS tigpspf 
 JOIN t_ivana_gerzova_project_sql_primary_final AS tigpspf2  
 	ON tigpspf.category = tigpspf2.category  
 	AND tigpspf.date_year + 1  = tigpspf2.date_year
 WHERE tigpspf.industry_branch IS NULL 
-	AND tigpspf2.industry_branch IS NULL;
+	AND tigpspf2.industry_branch IS NULL
+GROUP BY tigpspf.payroll_year ;
 
 
 -- otázka 5 --

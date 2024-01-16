@@ -1,6 +1,7 @@
 drop TABLE t_ivana_gerzova_project_SQL_primary_final;
 
--- tabulka mezd--	
+-- primární tabulka --
+
 CREATE TABLE t_ivana_gerzova_project_SQL_primary_final AS (
 	WITH edit_czechia_payroll AS (	
 		SELECT 
@@ -39,6 +40,20 @@ CREATE TABLE t_ivana_gerzova_project_SQL_primary_final AS (
 );
 	
 SELECT * FROM t_ivana_gerzova_project_sql_primary_final AS tigpspf;
+
+-- sekundární tabulka --
+
+CREATE TABLE t_ivana_gerzova_project_SQL_secondary_final AS (
+	SELECT
+		country,
+		`year`,
+		GDP,
+		gini,
+		population 
+	FROM economies AS e
+	WHERE `year` >= 2006
+		AND `year` <= 2018
+);
 	
 
 -- otázka 1 --

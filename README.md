@@ -1,11 +1,11 @@
-ENGETO SQL PROJECT
+# ENGETO SQL PROJECT
 # Struktura projektu
 
-# Soubory s tabulkami:
+## Soubory s tabulkami:
 - primary_table.sql
 - secondary_table.sql
 
-Soubory s odpověďmi:
+### Soubory s odpověďmi:
 - answer_1.sql
 - answer_2.sql
 - answer_3.sql

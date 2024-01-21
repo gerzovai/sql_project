@@ -11,7 +11,6 @@ SELECT
 FROM t_ivana_gerzova_project_sql_primary_final AS tigpspf 
 JOIN t_ivana_gerzova_project_sql_primary_final AS tigpspf2 
 	ON tigpspf.industry_branch = tigpspf2.industry_branch
-	AND tigpspf.category = tigpspf2.category 
 	AND tigpspf.payroll_year = tigpspf2.payroll_year + 1
 WHERE tigpspf.average_value - tigpspf2.average_value < 0
-ORDER BY industry_branch, prev_year, difference_value ;
+ORDER BY industry_branch, prev_year ;

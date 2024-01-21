@@ -1,4 +1,5 @@
 drop TABLE t_ivana_gerzova_project_SQL_primary_final;
+DROP TABLE t_ivana_gerzova_project_sql_secondary_final;
 
 -- primární tabulka --
 
@@ -43,16 +44,35 @@ SELECT * FROM t_ivana_gerzova_project_sql_primary_final AS tigpspf;
 
 -- sekundární tabulka --
 
+SELECT *
+FROM countries AS c ;
+
+SELECT
+	e.country,
+	e.`year`,
+	e.GDP,
+	e.gini,
+	e.population 
+FROM economies AS e
+JOIN countries AS c 
+	ON e.country = c.country 
+WHERE e.`year` >= 2006
+	AND e.`year` <= 2018
+	AND c.continent = 'Europe';
+
 CREATE TABLE t_ivana_gerzova_project_SQL_secondary_final AS (
 	SELECT
-		country,
-		`year`,
-		GDP,
-		gini,
-		population 
+		e.country,
+		e.`year`,
+		e.GDP,
+		e.gini,
+		e.population 
 	FROM economies AS e
-	WHERE `year` >= 2006
-		AND `year` <= 2018
+	JOIN countries AS c 
+		ON e.country = c.country 
+	WHERE e.`year` >= 2006
+		AND e.`year` <= 2018
+		AND c.continent = 'Europe'
 );
 	
 

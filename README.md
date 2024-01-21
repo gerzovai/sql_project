@@ -1,7 +1,7 @@
 ENGETO SQL PROJECT
-#Struktura projektu
+# Struktura projektu
 
-#Soubory s tabulkami:
+# Soubory s tabulkami:
 - primary_table.sql
 - secondary_table.sql
 

@@ -75,7 +75,7 @@ Mzdy jsem zaokrouhlila matematicky na koruny.
 Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
 
 ## Odpověď č.2
-<img src='graf2.png'>
+<img src='/graf2.png'>
 
 
 ## Otázka č.3

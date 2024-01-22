@@ -75,20 +75,28 @@ Mzdy jsem zaokrouhlila matematicky na koruny.
 Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
 
 ## Odpověď č.2
-<img src='./graf2.png'>
+Průměrné mzdy i ceny potravin většinou rostou, zde je porovnání množství koupeného mléka a chleba za průměrné ceny v odvětvích v letech 2006 a 2018. 
+
+<img src='./graf2.png' width = 350>
+Je na první pohled zřejmé, že množství mléka, které můžeme koupit v daném roce za průměrnou mzdu v odvětví, stále roste. Kromě peněžnictví a pojišťovnictví, které zažilo v roce 2013 výrazného poklesu mezd. I tak má společně s informačními a komunikačními činnosti nejvyšší množství koupeného mléka. Nejméně mléka si mohou koupit v odvětví ubytování, stravování a pohostinství.
+
+<img src='./graf2a.png' width = 450>
+U kupovaného chleba není nárůst v roce 2018 oproti roku 2006 tak zřejmý, někde je to nárůst pouze v jednotkách množství. Opět odvětví peněžnictví má pokles možného koupeného množství chleba, pokles zaznamenalo i odvětví těžba a dobývání, administrativní a podpůrné činnosti, činnosti v oblasti nemovitostí a ostatní činnosti.
+Opět největší množství si může koupit informační a komunikační činnosti a peněžnictví a pojišťovnictví.
+Nejméně chleba si mohou koupit opět v odvětví ubytování, stravování a pohostinství.
 
 
 ## Otázka č.3
 Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?
 
 ## Odpověď č.3
-
+Nejpomaleji zdražuje cukr krystalový. Jeho průměrný meziroční nárůst je -1,92 %, což vlastně vyjadřuje průměrný meziroční pokles. Pokud bychom vzali v potaz pouze nárůst byla by to kategorie banány žluté, kde je průměrný meziroční nárůst 0,81 %.
 
 ## Otázka č.4
 Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?
 
 ## Odpověď č.4
-
+Ve sledovaném období neexistuje rok, kde by byl meziroční nárůst cen potravin oproti růstu mezd výrazně vyšší, to je větší než 10 %. Nejvyššího rozdílu dosáhly ceny potravin v roce 2013 oproti roku 2012 a to 6,14 %.
 
 ## Otázka č.5
 Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo násdujícím roce výraznějším růstem?

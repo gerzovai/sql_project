@@ -77,7 +77,7 @@ Kolik je možné si koupit litrů mléka a kilogramů chleba za první a posledn
 ## Odpověď č.2
 Průměrné mzdy i ceny potravin většinou rostou, zde je porovnání množství koupeného mléka a chleba za průměrné ceny v odvětvích v letech 2006 a 2018. 
 
-<img src='./graf2.png' width = 350>
+<img src='./graf2.png' width = 500>
 Je na první pohled zřejmé, že množství mléka, které můžeme koupit v daném roce za průměrnou mzdu v odvětví, stále roste. Kromě peněžnictví a pojišťovnictví, které zažilo v roce 2013 výrazného poklesu mezd. I tak má společně s informačními a komunikačními činnosti nejvyšší množství koupeného mléka. Nejméně mléka si mohou koupit v odvětví ubytování, stravování a pohostinství.
 
 <img src='./graf2a.png' width = 450>

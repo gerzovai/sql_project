@@ -3,7 +3,7 @@
 
 SELECT 
 	tigpspf.category,
-	avg(((tigpspf2.average_price - tigpspf.average_price) / tigpspf.average_price) * 100) AS percentage_increase
+	round( avg(((tigpspf2.average_price - tigpspf.average_price) / tigpspf.average_price) * 100), 2) AS percentage_increase
 FROM t_ivana_gerzova_project_sql_primary_final AS tigpspf 
 JOIN t_ivana_gerzova_project_sql_primary_final AS tigpspf2 
 	ON tigpspf.category = tigpspf2.category 

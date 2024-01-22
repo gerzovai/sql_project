@@ -21,7 +21,7 @@ Potřebují k tomu od vás připravit robustní datové podklady, ve kterých bu
 
 Jako dodatečný materiál připravte i tabulku s HDP, GINI koeficientem a populací dalších evropských států ve stejném období, jako primární přehled pro ČR.
 
-Datové sady, které je možné použít pro získání vhodného datového podkladu
+Datové sady, které je možné použít pro získání vhodného datového podkladu:
 
 ### Primární tabulky:
 - czechia_payroll – Informace o mzdách v různých odvětvích za několikaleté období. 
@@ -45,14 +45,16 @@ Datová sada pochází z Portálu otevřených dat ČR.
 
 
 ### Výstup projektu
-Pomozte kolegům s daným úkolem. Výstupem by měly být dvě tabulky v databázi, ze kterých se požadovaná data dají získat. Tabulky pojmenujte t_{jmeno}_{prijmeni}_project_SQL_primary_final (pro data mezd a cen potravin za Českou republiku sjednocených na totožné porovnatelné období – společné roky) a t_{jmeno}_{prijmeni}_project_SQL_secondary_final (pro dodatečná data o dalších evropských státech).
+Pomozte kolegům s daným úkolem. Výstupem by měly být dvě tabulky v databázi, ze kterých se požadovaná data dají získat. 
+Tabulky pojmenujte t_{jmeno}_{prijmeni}_project_SQL_primary_final (pro data mezd a cen potravin za Českou republiku sjednocených na totožné porovnatelné období – společné roky) 
+a t_{jmeno}_{prijmeni}_project_SQL_secondary_final (pro dodatečná data o dalších evropských státech).
 
 Dále připravte sadu SQL, které z vámi připravených tabulek získají datový podklad k odpovězení na vytyčené výzkumné otázky. Pozor, otázky/hypotézy mohou vaše výstupy podporovat i vyvracet! Záleží na tom, co říkají data.
 
 Na svém GitHub účtu vytvořte repozitář (může být soukromý), kam uložíte všechny informace k projektu – hlavně SQL skript generující výslednou tabulku, popis mezivýsledků (průvodní listinu) a informace o výstupních datech (například kde chybí hodnoty apod.).
 
 # Informace z vypracování projektu
-Během přípravy primární tabulky jsem narazila na problém, jak by se daly propojit czechia_payroll s czechia price. V úvahu připadal sloupec datum, jenže v obou těchto tabulkách bylo datum jinak zadáno, proto jsem všechny ceny v czechia_price zprůměrovala za rok a za jednotlivé kategorie, na hodnoty v czechia_payroll jsem následně také použila výpočet průměru za rok a průmyslové odvětví.
+Během přípravy primární tabulky jsem narazila na problém, jak by se daly propojit tabulky czechia_payroll s czechia_price. V úvahu připadal sloupec datum, jenže v obou těchto tabulkách bylo datum jinak zadáno, proto jsem všechny ceny v czechia_price zprůměrovala za rok a za jednotlivé kategorie, na hodnoty v czechia_payroll jsem následně také použila výpočet průměru za rok a průmyslové odvětví.
 
 
 # Primární tabulka
@@ -66,13 +68,14 @@ Tabulku economies jsem propojila s tabulkou country, vybrala potřebné sloupce 
 Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
 
 ## Odpověď č.1
-
+Většinou mzdy rostou, avšak rok 2013 zaznamenal pokles mezd ve většině odvětví, největší pokles nastal v peněžnictví a pojišťovnictví, kdy se jednalo o pokles 4 479 Kč. Odvětví těžba a dobývání zažívá nejvíce poklesů za sledované období a to v roce 2009, kdy mzda klesla o 1 094 Kč, v roce 2013 o 928 Kč, v roce 2014 o 250 Kč a v roce 2016 o 187 Kč.
+Mzdy jsem zaokrouhlila matematicky na koruny.
 
 ## Otázka č.2
 Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
 
 ## Odpověď č.2
-
+![Alt text](image.png)
 
 ## Otázka č.3
 Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?

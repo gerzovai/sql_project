@@ -75,7 +75,8 @@ Mzdy jsem zaokrouhlila matematicky na koruny.
 Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
 
 ## Odpověď č.2
-![Alt text](image.png)
+graf2.png
+
 
 ## Otázka č.3
 Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuální meziroční nárůst)?

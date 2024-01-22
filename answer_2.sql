@@ -5,7 +5,7 @@ SELECT
 	industry_branch,
 	category,
 	payroll_year,
-	average_value / average_price AS amount
+	floor( average_value / average_price) AS amount
 FROM t_ivana_gerzova_project_sql_primary_final AS tigpspf 
 WHERE (category LIKE 'Mléko%' OR category LIKE 'Chléb%')
 	AND (payroll_year = 2006 OR payroll_year = 2018)

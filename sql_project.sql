@@ -1,5 +1,15 @@
-drop TABLE t_ivana_gerzova_project_SQL_primary_final;
-DROP TABLE t_ivana_gerzova_project_sql_secondary_final;
+
+
+
+
+
+/* PŘÍPRAVNÝ SCRIPT  	poté jsem rozdělila do jednotlivých scriptů */
+
+
+
+
+
+
 
 -- primární tabulka --
 

@@ -82,7 +82,7 @@ Je na první pohled zřejmé, že množství mléka, které můžeme koupit v da
 
 Graf č.2 <img src='./graf2a.png' width = 500>
 
-V grafu č.2 u kupovaného chleba není nárůst v roce 2018 oproti roku 2006 tak zřejmý, někde je to nárůst pouze v jednotkách množství. Opět odvětví peněžnictví má pokles možného koupeného množství chleba, pokles zaznamenalo i odvětví těžba a dobývání, administrativní a podpůrné činnosti, činnosti v oblasti nemovitostí a ostatní činnosti.
+U kupovaného chleba není nárůst v roce 2018 oproti roku 2006 tak zřejmý, někde je to nárůst pouze v jednotkách množství. Opět odvětví peněžnictví má pokles možného koupeného množství chleba, pokles zaznamenalo i odvětví těžba a dobývání, administrativní a podpůrné činnosti, činnosti v oblasti nemovitostí a ostatní činnosti.
 Opět největší množství si může koupit informační a komunikační činnosti a peněžnictví a pojišťovnictví.
 Nejméně chleba si mohou koupit opět v odvětví ubytování, stravování a pohostinství.
 
@@ -106,9 +106,11 @@ Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP 
 
 ## Odpověď č.5
 Graf č.3 <img src='./graf5a.png' width = 500>
-U grafu č.3 pokles HDP má vliv na mzdy tím, že sníží nárůst mezd.
+
+Pokles HDP má vliv na mzdy tím, že sníží nárůst mezd.
 Mzdy tedy meziročně nerostou tak rychle jako dosud.
 Pokud je nárůst HDP větší zvýší se i nárůst mezd.
 
 Graf č.4 <img src='./graf5b.png' width = 500>
-Graf č.4 - Pokud změna není extrémní, nemá pokles ani nárůst vliv na nárůst či pokles cen potravin. V roce 2009 byl pokles extrémní, proto byl i pokles cen potravin extrémní.
+
+Pokud změna není extrémní, nemá pokles ani nárůst vliv na nárůst či pokles cen potravin. V roce 2009 byl pokles extrémní, proto byl i pokles cen potravin extrémní.

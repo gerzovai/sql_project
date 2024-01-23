@@ -77,9 +77,11 @@ Kolik je možné si koupit litrů mléka a kilogramů chleba za první a posledn
 Průměrné mzdy i ceny potravin většinou rostou, zde je porovnání množství koupeného mléka a chleba za průměrné ceny v odvětvích v letech 2006 a 2018. 
 
 Graf č.1 <img src='./graf2.png' width = 500>
-U grafu č.1 je na první pohled zřejmé, že množství mléka, které můžeme koupit v daném roce za průměrnou mzdu v odvětví, stále roste. Kromě peněžnictví a pojišťovnictví, které zažilo v roce 2013 výrazného poklesu mezd. I tak má společně s informačními a komunikačními činnosti nejvyšší množství koupeného mléka. Nejméně mléka si mohou koupit v odvětví ubytování, stravování a pohostinství.
+
+Je na první pohled zřejmé, že množství mléka, které můžeme koupit v daném roce za průměrnou mzdu v odvětví, stále roste. Kromě peněžnictví a pojišťovnictví, které zažilo v roce 2013 výrazného poklesu mezd. I tak má společně s informačními a komunikačními činnosti nejvyšší množství koupeného mléka. Nejméně mléka si mohou koupit v odvětví ubytování, stravování a pohostinství.
 
 Graf č.2 <img src='./graf2a.png' width = 500>
+
 V grafu č.2 u kupovaného chleba není nárůst v roce 2018 oproti roku 2006 tak zřejmý, někde je to nárůst pouze v jednotkách množství. Opět odvětví peněžnictví má pokles možného koupeného množství chleba, pokles zaznamenalo i odvětví těžba a dobývání, administrativní a podpůrné činnosti, činnosti v oblasti nemovitostí a ostatní činnosti.
 Opět největší množství si může koupit informační a komunikační činnosti a peněžnictví a pojišťovnictví.
 Nejméně chleba si mohou koupit opět v odvětví ubytování, stravování a pohostinství.

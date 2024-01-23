@@ -1,4 +1,4 @@
-# ENGETO SQL PROJECT
+# ENGETO SQL PROJECT - Ivana Geržová
 # Struktura projektu
 
 ## Soubory s tabulkami:

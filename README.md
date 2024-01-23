@@ -104,6 +104,9 @@ Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP 
 
 ## Odpověď č.5
 <img src='./graf5a.png' width = 500>
+Pokles HDP má vliv na mzdy tím, že sníží nárůst mezd.
+Mzdy tedy meziročně nerostou tak rychle jako dosud.
+Pokud je nárůst HDP větší zvýší se i nárůst mezd.
 
 <img src='./graf5b.png' width = 500>
-
+Pokud změna není extrémní, nemá pokles ani nárůst vliv na nárůst či pokles cen potravin. V roce 2009 byl pokles extrémní, proto byl i pokles cen potravin extrémní.

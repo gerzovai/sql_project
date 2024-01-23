@@ -12,7 +12,6 @@
 - answer_4.sql
 - answer_5.sql
 
-Nejdřve jsem si vytvořila tabulky primary_table a secondary_table
 
 # Zadání
 Na vašem analytickém oddělení nezávislé společnosti, která se zabývá životní úrovní občanů, jste se dohodli, že se pokusíte odpovědět na pár definovaných výzkumných otázek, které adresují dostupnost základních potravin široké veřejnosti. Kolegové již vydefinovali základní otázky, na které se pokusí odpovědět a poskytnout tuto informaci tiskovému oddělení. Toto oddělení bude výsledky prezentovat na následující konferenci zaměřené na tuto oblast.
@@ -42,8 +41,6 @@ Datová sada pochází z Portálu otevřených dat ČR.
 - countries - Všemožné informace o zemích na světě, například hlavní město, měna, národní jídlo nebo průměrná výška populace.
 - economies - HDP, GINI, daňová zátěž, atd. pro daný stát a rok.
 
-
-
 ### Výstup projektu
 Pomozte kolegům s daným úkolem. Výstupem by měly být dvě tabulky v databázi, ze kterých se požadovaná data dají získat. 
 Tabulky pojmenujte t_{jmeno}_{prijmeni}_project_SQL_primary_final (pro data mezd a cen potravin za Českou republiku sjednocených na totožné porovnatelné období – společné roky) 
@@ -64,12 +61,14 @@ U primary_table jsem kódové označení převedla na textové, vybrala sloupce,
 Tabulku economies jsem propojila s tabulkou country, vybrala potřebné sloupce a provedla jsem výběr pouze na evropské státy a časový úsek stejný jako u primární tabulky.
 
 # Výzkumné otázky
+
 ## Otázka č.1
 Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
 
 ## Odpověď č.1
 Většinou mzdy rostou, avšak rok 2013 zaznamenal pokles mezd ve většině odvětví, největší pokles nastal v peněžnictví a pojišťovnictví, kdy se jednalo o pokles 4 479 Kč. Odvětví těžba a dobývání zažívá nejvíce poklesů za sledované období a to v roce 2009, kdy mzda klesla o 1 094 Kč, v roce 2013 o 928 Kč, v roce 2014 o 250 Kč a v roce 2016 o 187 Kč.
 Mzdy jsem zaokrouhlila matematicky na koruny.
+
 
 ## Otázka č.2
 Kolik je možné si koupit litrů mléka a kilogramů chleba za první a poslední srovnatelné období v dostupných datech cen a mezd?
@@ -80,7 +79,7 @@ Průměrné mzdy i ceny potravin většinou rostou, zde je porovnání množstv�
 <img src='./graf2.png' width = 500>
 Je na první pohled zřejmé, že množství mléka, které můžeme koupit v daném roce za průměrnou mzdu v odvětví, stále roste. Kromě peněžnictví a pojišťovnictví, které zažilo v roce 2013 výrazného poklesu mezd. I tak má společně s informačními a komunikačními činnosti nejvyšší množství koupeného mléka. Nejméně mléka si mohou koupit v odvětví ubytování, stravování a pohostinství.
 
-<img src='./graf2a.png' width = 450>
+<img src='./graf2a.png' width = 500>
 U kupovaného chleba není nárůst v roce 2018 oproti roku 2006 tak zřejmý, někde je to nárůst pouze v jednotkách množství. Opět odvětví peněžnictví má pokles možného koupeného množství chleba, pokles zaznamenalo i odvětví těžba a dobývání, administrativní a podpůrné činnosti, činnosti v oblasti nemovitostí a ostatní činnosti.
 Opět největší množství si může koupit informační a komunikační činnosti a peněžnictví a pojišťovnictví.
 Nejméně chleba si mohou koupit opět v odvětví ubytování, stravování a pohostinství.
@@ -92,15 +91,19 @@ Která kategorie potravin zdražuje nejpomaleji (je u ní nejnižší percentuá
 ## Odpověď č.3
 Nejpomaleji zdražuje cukr krystalový. Jeho průměrný meziroční nárůst je -1,92 %, což vlastně vyjadřuje průměrný meziroční pokles. Pokud bychom vzali v potaz pouze nárůst byla by to kategorie banány žluté, kde je průměrný meziroční nárůst 0,81 %.
 
+
 ## Otázka č.4
 Existuje rok, ve kterém byl meziroční nárůst cen potravin výrazně vyšší než růst mezd (větší než 10 %)?
 
 ## Odpověď č.4
 Ve sledovaném období neexistuje rok, kde by byl meziroční nárůst cen potravin oproti růstu mezd výrazně vyšší, to je větší než 10 %. Nejvyššího rozdílu dosáhly ceny potravin v roce 2013 oproti roku 2012 a to 6,14 %.
 
+
 ## Otázka č.5
 Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo násdujícím roce výraznějším růstem?
 
 ## Odpověď č.5
+<img src='./graf5a.png' width = 500>
 
+<img src='./graf5b.png' width = 500>
 

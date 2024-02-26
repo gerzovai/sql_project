@@ -76,11 +76,11 @@ Kolik je možné si koupit litrů mléka a kilogramů chleba za první a posledn
 ## Odpověď č.2
 Průměrné mzdy i ceny potravin většinou rostou, zde je porovnání množství koupeného mléka a chleba za průměrné ceny v odvětvích v letech 2006 a 2018. 
 
-Graf č.1 <img src='./graf2.png' width = 500>
+Graf č.1 <img src='./chart2.png' width = 500>
 
 Je na první pohled zřejmé, že množství mléka, které můžeme koupit v daném roce za průměrnou mzdu v odvětví, stále roste. Kromě peněžnictví a pojišťovnictví, které zažilo v roce 2013 výrazného poklesu mezd. I tak má společně s informačními a komunikačními činnosti nejvyšší množství koupeného mléka. Nejméně mléka si mohou koupit v odvětví ubytování, stravování a pohostinství.
 
-Graf č.2 <img src='./graf2a.png' width = 500>
+Graf č.2 <img src='./chart2a.png' width = 500>
 
 U kupovaného chleba není nárůst v roce 2018 oproti roku 2006 tak zřejmý, někde je to nárůst pouze v jednotkách množství. Opět odvětví peněžnictví má pokles možného koupeného množství chleba, pokles zaznamenalo i odvětví těžba a dobývání, administrativní a podpůrné činnosti, činnosti v oblasti nemovitostí a ostatní činnosti.
 Opět největší množství si může koupit informační a komunikační činnosti a peněžnictví a pojišťovnictví.
@@ -105,12 +105,12 @@ Ve sledovaném období neexistuje rok, kde by byl meziroční nárůst cen potra
 Má výška HDP vliv na změny ve mzdách a cenách potravin? Neboli, pokud HDP vzroste výrazněji v jednom roce, projeví se to na cenách potravin či mzdách ve stejném nebo násdujícím roce výraznějším růstem?
 
 ## Odpověď č.5
-Graf č.3 <img src='./graf5a.png' width = 500>
+Graf č.3 <img src='./chart5a.png' width = 500>
 
 Pokles HDP má vliv na mzdy tím, že sníží nárůst mezd.
 Mzdy tedy meziročně nerostou tak rychle jako dosud.
 Pokud je nárůst HDP větší zvýší se i nárůst mezd.
 
-Graf č.4 <img src='./graf5b.png' width = 500>
+Graf č.4 <img src='./chart5b.png' width = 500>
 
 Pokud změna není extrémní, nemá pokles ani nárůst vliv na nárůst či pokles cen potravin. V roce 2009 byl pokles extrémní, proto byl i pokles cen potravin extrémní.

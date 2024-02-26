@@ -1,7 +1,7 @@
 CREATE TABLE t_ivana_gerzova_project_SQL_primary_final AS (
 	WITH edit_czechia_payroll AS (	
 		SELECT 
-			round(avg(cp.value), 2) AS average_value,
+			ROUND (AVG(cp.value), 2) AS average_value,
 			cpvt.name AS value_type,
 			cpu.name AS unit,
 			cpib.name AS industry_branch,
@@ -19,7 +19,7 @@ CREATE TABLE t_ivana_gerzova_project_SQL_primary_final AS (
 	edit_czechia_price AS (
 		SELECT 
 			cpc.name AS category,
-			round(avg (cp2.value), 2) AS average_price,
+			ROUND (AVG(cp2.value), 2) AS average_price,
 			YEAR (cp2.date_from) AS date_year
 		FROM czechia_price AS cp2 
 		LEFT JOIN czechia_price_category AS cpc 
